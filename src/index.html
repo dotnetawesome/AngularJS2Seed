@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is my frist angular 2 app</title>
+        <meta charset="utf-8"/>
+        <!-- 1. Load libraries -->
+        <!-- Polyfill(s) for older browsers -->
+        <script src="../node_modules/core-js/client/shim.min.js"></script>
+        <script src="../node_modules/zone.js/dist/zone.js"></script>
+        <script src="../node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="../node_modules/systemjs/dist/system.src.js"></script>
+        <!-- System.JS configuration -->
+        <script src="./Systemjs.config.js"></script>
+        <script>
+            System.config({
+                "defaultJSExtensions" : true
+            })
+            System.import('./app/main.js').catch(function(err){
+                console.log(err);
+            })
+        </script>
+    </head>
+    <body>
+        <app>Please Wait...</app>
+    </body>
+</html>
